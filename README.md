@@ -13,4 +13,5 @@ The network has approximately 70k parameters, resulting in low computational com
 2. Run the `cnn.py` script to build the network.  
 3. Run the `train.py` script to train the model.  
 4. Run the `test.py` script to evaluate the model's classification performance using the test set and obtain an image of the `conv1` convolutional kernel.
-![conv1 filter](images/conv1_filter.png)
+
+<img src="images/conv1_filter.png" alt="conv1 filter" width="300" />

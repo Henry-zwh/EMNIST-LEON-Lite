@@ -1,5 +1,5 @@
 # EMNIST-LEON-Lite
-A CNN network designed to achieve a single-kernel lensless optoelectronic fusion convolutional neural network(LEON).
+A CNN network designed to achieve a single-kernel lensless opto-electronic neural network(LEON).
 
 ****Features****
 

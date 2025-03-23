@@ -5,7 +5,7 @@ A CNN network designed to implement a single-core, lens-free optoelectronic neur
 
 The conv1 layer of the CNN network uses a 3×3 binarized convolution kernel, corresponding to a physical entity as a black-and-white mask template.  
 
-The network has approximately 76k parameters, resulting in low computational complexity, making it suitable for embedded development and microcontroller integration.
+The network has approximately 76k parameters, low computational complexity, and a test accuracy of about 92%, making it suitable for embedded development and microcontroller integration.
 
 ****Usage****
 

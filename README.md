@@ -1,5 +1,5 @@
 # EMNIST-LOEN-Lite
-A CNN network designed to achieve a single-kernel lensless opto-electronic neural network(LOEN).
+A CNN network designed to implement a single-core, lens-free optoelectronic neural network (LOEN) to complete the EMNIST classification task.
 
 ****Features****
 

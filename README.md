@@ -15,6 +15,7 @@ The network has approximately 76k parameters, low computational complexity, and 
 
 ## Usage
 
+0. Open the **EMNIST_LOEN** folder and find different versions of EMNIST_LOEN.
 1. Run the `load_emnist.py` script to download the EMNIST dataset.  
 2. Run the `cnn.py` script to build the network.  
 3. Run the `train.py` script to train the model.  

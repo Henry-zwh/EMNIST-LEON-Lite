@@ -1,5 +1,7 @@
-# EMNIST-LOEN-Lite
+# EMNIST-LOEN
 A CNN network designed to implement a single-core, lensless optoelectronic neural network (LOEN) to complete the EMNIST classification task.
+
+## EMNIST-LOEN
 
 ****Features****
 

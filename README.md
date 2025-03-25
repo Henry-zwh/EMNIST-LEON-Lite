@@ -33,7 +33,6 @@ During training, **OneCycleLR** is used as the learning rate scheduler, employin
 
 On the test set, the model achieves a classification accuracy of **over 93.5%**. 🚀
 
-
 ## Usage
 
 0. Open the **EMNIST_LOEN** folder and find different versions of EMNIST_LOEN.

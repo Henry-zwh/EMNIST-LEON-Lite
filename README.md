@@ -20,7 +20,7 @@ The network has approximately **76k parameters**, low computational complexity, 
 The conv1 layer of the CNN network uses a **5×5 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.  
 
 <p align="center">
-  <img src="images/plus_conv1_filter.png" alt="conv1 filter" width="300" />
+  <img src="images/plus_conv_filter.png" alt="conv1 filter" width="300" />
 </p>
 
 The network has approximately **305K parameters**, which is relatively small compared to traditional CNNs. Depthwise separable convolutions are introduced to reduce computational cost, while the **SE module** and **spatial attention mechanism** enhance the model's classification performance.

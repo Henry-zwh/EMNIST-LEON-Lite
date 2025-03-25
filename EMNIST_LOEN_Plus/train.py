@@ -37,7 +37,7 @@ checkpoint_dir = "saved_models"
 os.makedirs(checkpoint_dir, exist_ok=True)
 
 # Model training
-epochs = 20
+epochs = 15
 total_train_time = 0.0
 
 for epoch in range(epochs):

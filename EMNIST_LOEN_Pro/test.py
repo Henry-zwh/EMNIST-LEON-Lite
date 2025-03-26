@@ -13,7 +13,8 @@ os.makedirs(save_dir, exist_ok=True)
 # Load model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = CNN().to(device)
-model.load_state_dict(torch.load("saved_models/emnist_cnn_lite.pth"))
+checkpoint = torch.load("saved_models/emnist_cnn_pro.pth", map_location=device)
+model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
 # Load test data
@@ -34,7 +35,6 @@ with torch.no_grad():
         _, predicted = torch.max(outputs, 1)
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
-
 print(f"Accuracy: {100 * correct / total:.2f}%")
 
 # Visualize the conv1's filter
@@ -83,7 +83,7 @@ if out_channels < num_rows * num_cols:
             fig.delaxes(axes[i // num_cols, i % num_cols])
 
 plt.tight_layout()
-save_path = os.path.join(save_dir, "lite_conv1_filter.png")
+save_path = os.path.join(save_dir, "pro_conv1_filter.png")
 plt.savefig(save_path, dpi=300, bbox_inches="tight")
 print(f"Conv1 filter visualization saved at {save_path}")
 plt.show()

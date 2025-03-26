@@ -20,8 +20,8 @@ class CNN(nn.Module):
             nn.Conv2d(9, 64, 3, padding=1),
             nn.BatchNorm2d(64),
             nn.SiLU(),
-            nn.Conv2d(64, 64, 3, padding=1, groups=64),
-            nn.Conv2d(64, 64, 1, groups=16),
+            #nn.Conv2d(64, 64, 3, padding=1, groups=64),
+            #nn.Conv2d(64, 64, 1, groups=16),
         )
         # SE block
         self.se = nn.Sequential(
@@ -33,17 +33,17 @@ class CNN(nn.Module):
         )
         # Spatial attention
         self.spatial_att = nn.Sequential(
-            nn.Conv2d(64, 64, 3, padding=1, groups=64),
+            nn.Conv2d(64, 64, 3, padding=1, groups=32),
             nn.Conv2d(64, 1, 1),
             nn.Sigmoid()
         )
         self.pool2 = nn.MaxPool2d(2, 2)
         # Classifier
         self.fc = nn.Sequential(
-            nn.Linear(64*6*6, 128),
+            nn.Linear(64*6*6, 64),
             nn.Dropout(0.3),
             nn.SiLU(),
-            nn.Linear(128, 27)
+            nn.Linear(64, 27)
         )
         
     def forward(self, x):

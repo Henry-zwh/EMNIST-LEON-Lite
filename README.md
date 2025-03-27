@@ -55,6 +55,7 @@ The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution
 </p>
 
 The network has approximately **38K parameters**, making it very lightweight.🔥
+The computational load of the conv1 layer accounts for **approximately 30%** of the network's total computational load. This allows optical convolutions to replace more electrical convolutions.🔥
 
 It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
 

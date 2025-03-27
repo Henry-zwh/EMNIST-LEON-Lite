@@ -51,7 +51,7 @@ On the test set, the model achieves a classification accuracy of **over 93.5%**.
 The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
 
 <p align="center">
-  <img src="images/pro_conv1_filter.png" alt="conv1 filter" width="400" />
+  <img src="images/pro_conv1_filter.png" alt="conv1 filter" width="500" />
 </p>
 
 The network has approximately **38K parameters**, making it very lightweight.🔥

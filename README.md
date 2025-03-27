@@ -46,15 +46,20 @@ On the test set, the model achieves a classification accuracy of **over 93.5%**.
 
 ## EMNIST-LOEN_Pro
 
+****Features****
+
 The conv1 layer of the CNN network uses a **9-channel 3×3 convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
 
 <p align="center">
   <img src="images/pro_conv1_filter.png" alt="conv1 filter" width="300" />
 </p>
 
-The network has approximately **38K parameters**, making it very lightweight. It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
+The network has approximately **38K parameters**, making it very lightweight.🔥
+
+It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
+
+****Training and Performance****
 
 Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93%** on the test set.
 
-****Features****
 

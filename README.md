@@ -4,6 +4,14 @@ A CNN network designed to implement a single-core, lensless optoelectronic neura
 
 Here, we provide different versions of the network architecture. For different sizes of the conv1 convolution kernel, we also perform simulations using **MATLAB**.
 
+## Usage
+
+0. Open the **EMNIST_LOEN** folder and find different versions of EMNIST_LOEN.
+1. Run the `load_emnist.py` script to download the EMNIST dataset.  
+2. Run the `cnn.py` script to build the network.  
+3. Run the `train.py` script to train the model.  
+4. Run the `test.py` script to evaluate the model's classification performance using the test set and obtain an image of the `conv1` convolutional kernel.
+
 ## EMNIST-LOEN-Lite
 
 ****Features****
@@ -36,10 +44,17 @@ During training, **OneCycleLR** is used as the learning rate scheduler, employin
 
 On the test set, the model achieves a classification accuracy of **over 93.5%**. 🚀
 
-## Usage
+## EMNIST-LOEN_Pro
 
-0. Open the **EMNIST_LOEN** folder and find different versions of EMNIST_LOEN.
-1. Run the `load_emnist.py` script to download the EMNIST dataset.  
-2. Run the `cnn.py` script to build the network.  
-3. Run the `train.py` script to train the model.  
-4. Run the `test.py` script to evaluate the model's classification performance using the test set and obtain an image of the `conv1` convolutional kernel.
+The conv1 layer of the CNN network uses a **9-channel 3×3 convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
+
+<p align="center">
+  <img src="images/pro_conv1_filter.png" alt="conv1 filter" width="300" />
+</p>
+
+The network has approximately **38K parameters**, making it very lightweight. It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
+
+Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93%** on the test set.
+
+****Features****
+

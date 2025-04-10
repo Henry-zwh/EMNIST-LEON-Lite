@@ -5,7 +5,7 @@ import torch.nn.functional as F
 class BinaryConv2d(nn.Conv2d):
     def forward(self, x):
         # Duplicate the weight tensor
-        binary_weight = torch.sign(self.weight)
+        binary_weight = (self.weight > 0).float()
         return F.conv2d(x, binary_weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
 
 class EnhancedAttention(nn.Module):
@@ -36,7 +36,7 @@ class CNN(nn.Module):
         super(CNN, self).__init__()
         # Block 1
         self.conv1 = BinaryConv2d(1, 9, kernel_size=3)
-        self.pool1 = nn.MaxPool2d(3, 3)
+        self.pool1 = nn.MaxPool2d(2, 2)
         # Block 2
         self.conv2 = nn.Sequential(
             nn.Conv2d(9, 16, 3, padding=1),
@@ -48,7 +48,7 @@ class CNN(nn.Module):
         self.pool2 = nn.MaxPool2d(2, 2)
         # Classifier
         self.fc = nn.Sequential(
-            nn.Linear(16*4*4, 128),
+            nn.Linear(16*6*6, 128),
             nn.Dropout(0.3),
             nn.SiLU(),
             nn.Linear(128, 27)

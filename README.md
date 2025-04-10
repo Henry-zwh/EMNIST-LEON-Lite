@@ -62,7 +62,7 @@ It simplifies a large number of convolutional and fully connected layers while s
 
 ****Training and Performance****
 
-The ELITE version retains the training adjustment mechanism of the Beta version and achieves an accuracy of **over 92%(92.21%)** on the test set.
+The ELITE version retains the training adjustment mechanism of the Beta version and achieves an accuracy of **over 92% (92.21%)** on the test set.
 
 ## EMNIST-LOEN-PRO
 
@@ -74,15 +74,15 @@ The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution
   <img src="images/conv1_filter_pro.png" alt="conv1 filter" width="500" />
 </p>
 
-The network has approximately **38K parameters**, making it very lightweight.🔥
+The network has approximately **79.0K parameters**.
 
-The computational load of the conv1 layer accounts for **approximately 30%** of the network's total computational load. This allows optical convolutions to replace more electrical convolutions.🔥
+The computational load of the conv1 layer accounts for **approximately %** of the network's total computational load.
 
 It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
 
 ****Training and Performance****
 
-Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93%** on the test set.
+Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93% (93.14%)** on the test set.
 
 ## EMNIST-LOEN-ULTRA
 

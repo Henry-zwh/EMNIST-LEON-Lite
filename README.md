@@ -76,9 +76,9 @@ The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution
 
 The network has approximately **79.0K parameters**.
 
-The computational load of the conv1 layer accounts for **approximately %** of the network's total computational load.
+The computational load of the conv1 layer accounts for **approximately 14.9%** of the network's total computational load.
 
-It simplifies a large number of convolutional and fully connected layers while significantly reducing the number of parameters and computational cost. By incorporating an enhanced attention mechanism that combines **channel attention** and **spatial attention**, the network can better focus on important channels and spatial regions in the input features, thereby improving model performance.
+Aside from the conv1 layer, the PRO CNN architecture is the result of fine-tuning parameters of the ELITE version.
 
 ****Training and Performance****
 

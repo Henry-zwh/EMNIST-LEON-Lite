@@ -48,6 +48,20 @@ On the test set, the model achieves a classification accuracy of **over 93.5%**.
 
 ****Features****
 
+The conv1 layer of the CNN network uses a **4-channel 3×3 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
+
+<p align="center">
+  <img src="images/conv1_filter_elite.png" alt="conv1 filter" width="500" />
+</p>
+
+The network has approximately **37.3K parameters**, making it very lightweight.🔥
+
+The computational load of the conv1 layer accounts for **approximately 30%** of the network's total computational load. This allows optical convolutions to replace more electrical convolutions.🔥
+
+****Training and Performance****
+
+The ELITE version retains the training adjustment mechanism of the Beta version and achieves an accuracy of **over 92%(92.21%)** on the test set.
+
 ## EMNIST-LOEN-PRO
 
 ****Features****

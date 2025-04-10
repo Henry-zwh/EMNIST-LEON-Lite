@@ -12,26 +12,26 @@ Here, we provide different versions of the network architecture. For different s
 3. Run the `train.py` script to train the model.  
 4. Run the `test.py` script to evaluate the model's classification performance using the test set and obtain an image of the `conv1` convolutional kernel.
 
-## EMNIST-LOEN-Lite
+## EMNIST-LOEN-Alpha
 
 ****Features****
 
 The conv1 layer of the CNN network uses a **3×3 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.  
 
 <p align="center">
-  <img src="images/lite_conv1_filter.png" alt="conv1 filter" width="300" />
+  <img src="images/conv1_filter_alpha.png" alt="conv1 filter" width="300" />
 </p>
 
 The network has approximately **76k parameters**, low computational complexity, and a test accuracy of about **92%**, making it suitable for embedded development and microcontroller integration.
 
-## EMNIST-LOEN-Plus
+## EMNIST-LOEN-Beta
 
 ****Features****
 
 The conv1 layer of the CNN network uses a **5×5 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.  
 
 <p align="center">
-  <img src="images/plus_conv1_filter.png" alt="conv1 filter" width="300" />
+  <img src="images/conv1_filter_beta.png" alt="conv1 filter" width="300" />
 </p>
 
 The network has approximately **300K parameters**, which is relatively small compared to traditional CNNs. Depthwise separable convolutions are introduced to reduce computational cost, while the **SE module** and **spatial attention mechanism** enhance the model's classification performance.
@@ -44,14 +44,18 @@ During training, **OneCycleLR** is used as the learning rate scheduler, employin
 
 On the test set, the model achieves a classification accuracy of **over 93.5%**. 🚀
 
-## EMNIST-LOEN_Pro
+## EMNIST-LOEN-ELITE
+
+****Features****
+
+## EMNIST-LOEN-Pro
 
 ****Features****
 
 The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
 
 <p align="center">
-  <img src="images/pro_conv1_filter.png" alt="conv1 filter" width="500" />
+  <img src="images/conv1_filter_pro.png" alt="conv1 filter" width="500" />
 </p>
 
 The network has approximately **38K parameters**, making it very lightweight.🔥
@@ -64,4 +68,6 @@ It simplifies a large number of convolutional and fully connected layers while s
 
 Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93%** on the test set.
 
+## EMNIST-LOEN-ULTRA
 
+****Features****

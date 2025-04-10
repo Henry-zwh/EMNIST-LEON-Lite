@@ -48,7 +48,7 @@ On the test set, the model achieves a classification accuracy of **over 93.5%**.
 
 ****Features****
 
-## EMNIST-LOEN-Pro
+## EMNIST-LOEN-PRO
 
 ****Features****
 

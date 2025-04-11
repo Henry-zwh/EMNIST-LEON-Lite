@@ -76,7 +76,7 @@ The conv1 layer of the CNN network uses a **9-channel 3×3 binarized convolution
 
 The network has approximately **79.0K parameters**.🔥
 
-The computational load of the conv1 layer accounts for **approximately 14.9%** of the network's total computational load.🔥
+The computational cost (in FLOPs) of the conv1 layer accounts for **14.9%**.🔥
 
 Aside from the conv1 layer, the PRO CNN architecture is the result of fine-tuning parameters of the ELITE version.
 
@@ -96,7 +96,7 @@ The conv1 layer of the CNN network uses a **9-channel 5×5 binarized convolution
 
 The network has approximately **154.4K parameters**.🔥
 
-The computational load of the conv1 layer accounts for **approximately 19.4%** of the network's total computational load.🔥
+The computational cost (in FLOPs) of the conv1 layer accounts for **19.4%**.🔥
 
 Aside from the conv1 layer, the ULTRA CNN architecture is the result of fine-tuning parameters of the ELITE version.
 

@@ -82,8 +82,24 @@ Aside from the conv1 layer, the PRO CNN architecture is the result of fine-tunin
 
 ****Training and Performance****
 
-Meanwhile, this version retains the training adjustment mechanism of the Plus version and achieves an accuracy of **over 93% (93.14%)** on the test set.
+The PRO version retains the training adjustment mechanism of the Beta version and achieves an accuracy of **over 93% (93.14%)** on the test set.
 
 ## EMNIST-LOEN-ULTRA
 
 ****Features****
+
+The conv1 layer of the CNN network uses a **9-channel 5×5 binarized convolution kernel**, corresponding to a physical entity as a black-and-white mask template.
+
+<p align="center">
+  <img src="images/conv1_filter_ultra.png" alt="conv1 filter" width="500" />
+</p>
+
+The network has approximately **154.4K parameters**.
+
+The computational load of the conv1 layer accounts for **approximately 19.4%** of the network's total computational load.
+
+Aside from the conv1 layer, the ULTRA CNN architecture is the result of fine-tuning parameters of the ELITE version.
+
+****Training and Performance****
+
+The ULTRA version retains the training adjustment mechanism of the Beta version and achieves an accuracy of **93.77%** on the test set.

@@ -5,7 +5,7 @@ import torch.nn.functional as F
 class BinaryConv2d(nn.Conv2d):
     def forward(self, x):
         # Duplicate the weight tensor
-        binary_weight = torch.sign(self.weight)
+        binary_weight = (self.weight > 0).float()
         return F.conv2d(x, binary_weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
 
 class EnhancedAttention(nn.Module):
@@ -13,9 +13,9 @@ class EnhancedAttention(nn.Module):
         super().__init__()
         self.channel_att = nn.Sequential(
             nn.AdaptiveAvgPool2d(1),
-            nn.Conv2d(channels, max(1, channels//4), 1),
+            nn.Conv2d(channels, max(1, channels//8), 1),
             nn.GELU(),
-            nn.Conv2d(max(1, channels//4), channels, 1),
+            nn.Conv2d(max(1, channels//8), channels, 1),
             nn.Sigmoid()
         )
         self.spatial_att = nn.Sequential(
@@ -39,16 +39,16 @@ class CNN(nn.Module):
         self.pool1 = nn.MaxPool2d(2, 2)
         # Block 2
         self.conv2 = nn.Sequential(
-            nn.Conv2d(9, 24, 3, padding=1),
-            nn.BatchNorm2d(24),
+            nn.Conv2d(9, 32, 3, padding=1),
+            nn.BatchNorm2d(32),
             nn.GELU(),
         )
         # Attention
-        self.attention = EnhancedAttention(24)
+        self.attention = EnhancedAttention(32)
         self.pool2 = nn.MaxPool2d(2, 2)
         # Classifier
         self.fc = nn.Sequential(
-            nn.Linear(24*6*6, 128),
+            nn.Linear(32*6*6, 128),
             nn.Dropout(0.3),
             nn.GELU(),
             nn.Linear(128, 27)

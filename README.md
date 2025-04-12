@@ -22,7 +22,7 @@ The conv1 layer of the CNN network uses a **3×3 binarized convolution kernel**,
   <img src="images/conv1_filter_alpha.png" alt="conv1 filter" width="300" />
 </p>
 
-The network has approximately **76k parameters**, low computational complexity, and a test accuracy of about **92%**, making it suitable for embedded development and microcontroller integration.
+The network has approximately **20.4k parameters**, low computational complexity, and a test accuracy of **91.71%**, making it suitable for embedded development and microcontroller integration.
 
 ## EMNIST-LOEN-Beta
 

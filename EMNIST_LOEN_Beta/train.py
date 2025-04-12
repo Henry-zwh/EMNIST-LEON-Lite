@@ -58,7 +58,7 @@ for epoch in range(epochs):
         scheduler.step()
         # conv1 weight binarization
         with torch.no_grad():
-            model.conv1.weight.data = torch.sign(model.conv1.weight.data)
+            model.conv1.weight.data = (model.conv1.weight.data > 0).float()
         # statistics
         running_loss += loss.item()
         _, predicted = torch.max(outputs, 1)

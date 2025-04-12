@@ -38,7 +38,7 @@ for epoch in range(epochs):
         optimizer.step()
 
         with torch.no_grad():
-            model.conv1.weight.data = torch.sign(model.conv1.weight.data)
+            model.conv1.weight.data = (model.conv1.weight.data > 0).float()
 
         running_loss += loss.item()
         _, predicted = torch.max(outputs, 1)

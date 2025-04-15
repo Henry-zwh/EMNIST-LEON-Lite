@@ -24,6 +24,8 @@ The conv1 layer of the CNN network uses a **3×3 binarized convolution kernel**,
 
 The network has approximately **20.4k parameters**, low computational complexity, and a test accuracy of **91.71%**, making it suitable for embedded development and microcontroller integration.
 
+The computational cost (in FLOPs) of the conv1 layer accounts for **15.8%**.🔥
+
 ## EMNIST-LOEN-Beta
 
 ****Features****
@@ -35,6 +37,8 @@ The conv1 layer of the CNN network uses a **5×5 binarized convolution kernel**,
 </p>
 
 The network has approximately **77.9K parameters**. Depthwise separable convolutions are introduced to reduce computational cost, while the **SE module** and **spatial attention mechanism** enhance the model's classification performance.
+
+The computational cost (in FLOPs) of the conv1 layer accounts for **10.6%**.🔥
 
 ****Training and Performance****
 
